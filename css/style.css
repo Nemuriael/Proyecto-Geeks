@@ -37,6 +37,16 @@ a {
 	text-decoration: none;
 }
 
+h2 {
+	font-family: 'Roboto', sans-serif;
+	color: #cfcfcf;
+	cursor:pointer ;
+}
+
+h2.active {
+	color: rgb(250, 111, 255);
+}
+
 .btn {
 	cursor: pointer;
     padding: 10px 20px;
@@ -104,10 +114,20 @@ a {
     font-weight: 500;
     border-radius: 20px;
 }
+.flex {
+	margin-bottom: 16px;
+	justify-content: space-between;
+	display:flex;
+}
+.addButton {
+	cursor:pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
 
 .chat-sidebar h3 {
 	font-weight: 500;
-	margin-bottom: 15px;
 	padding-bottom: 8px;
 	border-bottom: 1px solid;
     border-image-source: linear-gradient(45deg, rgb(255, 176, 251), rgb(29, 29, 29));
