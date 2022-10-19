@@ -20,6 +20,8 @@ chatForm.addEventListener("submit", (e) => {
   msgElement.focus();
 });
 
+//Buscador de palabras
+
 searchBar.addEventListener("submit", (e) => {
   e.preventDefault();
   const searchElement = e.target.elements.search;
@@ -43,6 +45,7 @@ searchBar.addEventListener("submit", (e) => {
           msg.time +
           "</span></p>";
         html += '<p class="text">' + msg.text + "</p>";
+        html += '<small class="small-text">' + channel.name + "</small>";
         html += "</div>";
         searchContainer.insertAdjacentHTML("beforeend", html);
       }
@@ -50,9 +53,14 @@ searchBar.addEventListener("submit", (e) => {
   });
 });
 
-function outputMessages(msg) {
-  //Print del mensaje
+//Click para ir al indice del mensaje
 
+function goToMessage(indexChannel, indexMessage) {
+  changeChannel(indexChannel, indexMessage);
+}
+//Print del mensaje
+
+function outputMessages(msg, currentIndex, index) {
   let html = "";
   html += '<div class="message">';
   html +=
@@ -63,10 +71,15 @@ function outputMessages(msg) {
   //Insert del mensaje en el DOM
 
   messageContainer.insertAdjacentHTML("beforeend", html);
-
-  document.querySelector(".message:last-child").scrollIntoView({
-    behavior: "smooth",
-  });
+  if (index === undefined) {
+    document.querySelector(".message:last-child").scrollIntoView({
+      behavior: "smooth",
+    });
+  } else if (currentIndex === index) {
+    document.querySelector(".message:last-child").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 }
 
 //Canal default en el que se guardaran los mensajes
@@ -84,23 +97,24 @@ function printChannel(index) {
     '<h2 onclick="changeChannel(' + index + ')">' + channel.name + "</h2>";
   channelContainer.insertAdjacentHTML("beforeend", html);
 }
+
 //Selector de canal que guarda los mensajes
 
-function changeChannel(index) {
+function changeChannel(indexChannel, indexMessage) {
   const previousChannelElement = document.querySelector(
     "#channels h2:nth-child(" + (currentChannel + 1) + ")"
   );
   previousChannelElement.classList.remove("active");
 
   const selectedChannelElement = document.querySelector(
-    "#channels h2:nth-child(" + (index + 1) + ")"
+    "#channels h2:nth-child(" + (indexChannel + 1) + ")"
   );
   selectedChannelElement.classList.add("active");
 
-  currentChannel = index;
+  currentChannel = indexChannel;
   messageContainer.innerHTML = "";
-  channels[currentChannel].messages.forEach((msg) => {
-    outputMessages(msg);
+  channels[currentChannel].messages.forEach((msg, currentIndex) => {
+    outputMessages(msg, currentIndex, indexMessage);
   });
 }
 
