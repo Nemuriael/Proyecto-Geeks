@@ -66,7 +66,7 @@ h2.active {
     box-shadow: 0px 3px 8px 1px #707070;
 }
 
-/* Página del chat */
+/* Cuadro del Chat */
 
 .chat-container {
 	width: 90vw;
@@ -75,11 +75,10 @@ h2.active {
     margin: 0 auto;
     overflow: hidden;
     height: 90vh;
-    max-height: 600px;
     display: flex;
 	flex-direction: column;
 	border-radius: 5px;
-	box-shadow: 0px 5px 20px 20px #e8e8e8;;
+	box-shadow: 0px 5px 20px 20px #ff83e4;;
 }
 
 .chat-header {
@@ -93,7 +92,7 @@ h2.active {
 
 .chat-main {
 	display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr;
     flex: auto;
     overflow: hidden;
 }
@@ -105,6 +104,38 @@ h2.active {
 	overflow-y: auto;
 }
 
+.chat-search {
+	background: var(--dark-color-b);
+	padding: 15px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.search-bar {
+	background:rgb(255, 255, 255);
+	margin-bottom: 10px;
+	border-radius: 4em;
+	padding: 4px;
+	display:flex;
+	align-items: center;
+}
+
+.search-bar input {
+	min-width: 0px;
+	border: none;
+	margin-left: 6px;
+	outline: none;
+	padding: 4px;
+}
+
+.search-bar label {
+	display: none
+}
+
+.search-bar:focus-within {
+	box-shadow: 0px 0px 5px 2px #ff5df7
+}
+
 .chat-sidebar h2 {
 	font-family: 'Merienda One', cursive;
 	font-size: 16px;
@@ -113,6 +144,10 @@ h2.active {
     margin-bottom: 20px;
     font-weight: 500;
     border-radius: 20px;
+}
+
+.text {
+	margin-bottom: 10px;
 }
 .flex {
 	margin-bottom: 16px;
@@ -139,20 +174,29 @@ h2.active {
 	font-family: 'Merienda One', cursive;
 }
 
+.small-text {
+	font-style: italic;
+}
+
 .chat-messages {
 	padding: 30px;
 	max-height: 500px;
 	overflow-y: auto;
 }
 
-.chat-messages .message {
+.message {
 	padding: 10px;
 	margin-bottom: 15px;
 	background-color: var(--light-color);
 	border-radius: 5px;
 }
 
-.chat-messages .message .meta {
+#search-container .message:hover {
+	background: #f27dff;
+	cursor: pointer;
+}
+
+.message .meta {
 	font-family: 'Merienda One', cursive;
 	font-size: 15px;
 	font-weight: bold;
@@ -161,7 +205,7 @@ h2.active {
 	margin-bottom: 7px;
 }
 
-.chat-messages .message .meta span {
+.message .meta span {
 	color: rgb(105, 105, 105);
 	font-family: 'Roboto', cursive;
 }
