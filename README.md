@@ -4,10 +4,10 @@
 
 #### :black_medium_square: Funcionalidades
 
-:black_small_square: Crear canales
-:black_small_square: Escribir y enviar mensajes
-:black_small_square: Historico con scroll de los mensajes
-:black_small_square: Buscador de mensajes global entre todos los canales
+-Crear canales
+-Escribir y enviar mensajes
+-Historico con scroll de los mensajes
+-Buscador de mensajes global entre todos los canales
 
 #### :black_medium_square: Manejo
 
