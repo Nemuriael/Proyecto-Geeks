@@ -4,19 +4,19 @@
 
 #### :black_medium_square: Funcionalidades
 
-\_Crear canales
-\_Escribir y enviar mensajes
-\_Historico con scroll de los mensajes
-\_Buscador de mensajes global entre todos los canales
+- Crear canales
+- Escribir y enviar mensajes
+- Historico con scroll de los mensajes
+- Buscador de mensajes global entre todos los canales
 
 #### :black_medium_square: Manejo
 
-:black_small_square: Para escribir escriba en la barra inferior
-:black_small_square: Para buscar mensajes escribe el texto que quieras buscar y posteriormente haz click en el mensaje deseado, saldrá un indicador que especificará en qué canal se encuentra
+ - Para escribir escriba en la barra inferior
+ - Para buscar mensajes escribe el texto que quieras buscar y posteriormente haz click en el mensaje deseado, saldrá un indicador que especificará en qué canal se encuentra
 
 #### :black_medium_square: Instalación
 
-:black_small_square: Esta app no cuenta con ningún método de instalación
+- Esta app no cuenta con ningún método de instalación
 
 #### :beetle: Apartado de bugs conocidos
 
