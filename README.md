@@ -11,8 +11,8 @@
 
 #### :black_medium_square: Manejo
 
- - Para escribir escriba en la barra inferior
- - Para buscar mensajes escribe el texto que quieras buscar y posteriormente haz click en el mensaje deseado, saldrá un indicador que especificará en qué canal se encuentra
+- Para escribir escriba en la barra inferior
+- Para buscar mensajes escribe el texto que quieras buscar y posteriormente haz click en el mensaje deseado, saldrá un indicador que especificará en qué canal se encuentra
 
 #### :black_medium_square: Instalación
 

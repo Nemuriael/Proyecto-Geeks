@@ -12,9 +12,10 @@
   <div class="chat-container">
     <header class="chat-header">
       <h1><i class="fa-regular fa-comments"></i> Chat </h1>
+      <button class="menu-button" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
     </header>
     <main class="chat-main">
-      <div class="chat-sidebar">
+      <div class="chat-sidebar hidden">
         <div class="flex">
           <h3><i class="fa-solid fa-people-roof"></i> Salas </h3>
           <button class="addButton" onclick="createChannel()"><i class="fa-solid fa-plus"></i></button>
@@ -22,7 +23,7 @@
         <div id="channels"></div>
       </div>
       <div class="chat-messages"></div>
-      <div class="chat-search">
+      <div class="chat-search hidden">
         <form class="search-bar">
           <label for="search">Buscar</label>
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -40,12 +41,13 @@
       <form id="chat-form">
         <input
           id="msg"
+          style="min-width: 100px;"
           type="text"
           placeholder="Escriba su mensaje" 
           required
           autocomplete="off"
         />
-        <button class="btn"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+        <button class="btn"><i class="fa-solid fa-paper-plane"></i> <span class="send-text">Enviar</span> </button>
       </form>
     </div>
   </div> 

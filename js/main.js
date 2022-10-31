@@ -1,6 +1,11 @@
 const chatForm = document.querySelector("#chat-form");
 const messageContainer = document.querySelector(".chat-messages");
+const searchContainer = document.querySelector(".chat-search");
+const sidebarContainer = document.querySelector(".chat-sidebar");
 const searchBar = document.querySelector(".search-bar");
+const menuButton = document.querySelector(".menu-button");
+const chatFormContainer = document.querySelector(".chat-form-container");
+let toggled = false;
 
 chatForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -56,6 +61,9 @@ searchBar.addEventListener("submit", (e) => {
 //Click para ir al indice del mensaje
 
 function goToMessage(indexChannel, indexMessage) {
+  if (toggled) {
+    toggleMenu();
+  }
   changeChannel(indexChannel, indexMessage);
 }
 //Print del mensaje
@@ -101,6 +109,9 @@ function printChannel(index) {
 //Selector de canal que guarda los mensajes
 
 function changeChannel(indexChannel, indexMessage) {
+  if (toggled) {
+    toggleMenu();
+  }
   const previousChannelElement = document.querySelector(
     "#channels h2:nth-child(" + (currentChannel + 1) + ")"
   );
@@ -126,6 +137,23 @@ function createChannel() {
     channels.push({ name: channelName, messages: [] });
     printChannel(channels.length - 1);
   }
+}
+
+function toggleMenu() {
+  if (toggled) {
+    searchContainer.classList.add("hidden");
+    sidebarContainer.classList.add("hidden");
+    chatFormContainer.classList.remove("hidden");
+    menuButton.classList.remove("toggled");
+    messageContainer.classList.remove("hidden");
+  } else {
+    searchContainer.classList.remove("hidden");
+    sidebarContainer.classList.remove("hidden");
+    chatFormContainer.classList.add("hidden");
+    menuButton.classList.add("toggled");
+    messageContainer.classList.add("hidden");
+  }
+  toggled = !toggled;
 }
 
 printChannel(currentChannel);

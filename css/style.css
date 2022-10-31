@@ -29,6 +29,11 @@ body {
 	background: #000000;
 }
 
+
+.menu-button {
+	display: none;
+}
+
 ul {
 	list-style: none;
 }
@@ -235,11 +240,33 @@ h2.active {
 }
 
 @media (max-width: 700px) {
+	.hidden {
+		display: none;
+	}
+
+	.send-text {
+		display: none;
+	}
+
+	.menu-button {
+		display: initial;
+		background: none;
+		color: #fff;
+		border: none;
+		font-size: 20px;
+	}
+
+	.toggled.menu-button{
+		color: #f9bfff;
+	}
+
 	.chat-main {
 		display: block;
+		overflow-y: auto;
 	}
 
 	.chat-sidebar {
-		display: none;
+		padding-bottom: 20px;
+		max-height: 200px;
 	}
 }
