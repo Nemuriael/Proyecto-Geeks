@@ -24,7 +24,7 @@ Por ahora no he encontrado ningún bug, toda la aplicación funciona y cumple co
 
 #### :rocket: Apartado de novedades
 
-Esta es la primera versión del programa pero en el futuro cuando adquiera los conocimientos haré que sea responsive de modo que se pueda ver también en pantallas de smartphones y en pestañas reducidas
+- 31/09/22 Cambios en el style para hacer que la página sea funcional en pantallas más reducidas como smartphones o tablets
 
 # :telephone_receiver: Créditos y contacto
 
